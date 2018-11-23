@@ -1,0 +1,77 @@
+import * as React from 'react';
+import './style/index.less';
+import ViewerProps, { ImageDecorator, ToolbarConfig } from './ViewerProps';
+import { ActionType } from './Icon';
+declare function noop(): void;
+export interface ViewerCoreState {
+    visible?: boolean;
+    visibleStart?: boolean;
+    transitionEnd?: boolean;
+    activeIndex?: number;
+    width?: number;
+    height?: number;
+    top?: number;
+    left?: number;
+    rotate?: number;
+    imageWidth?: number;
+    imageHeight?: number;
+    scaleX?: number;
+    scaleY?: number;
+    loading?: boolean;
+    loadFailed?: boolean;
+}
+export default class ViewerCore extends React.Component<ViewerProps, ViewerCoreState> {
+    static defaultProps: {
+        visible: boolean;
+        onClose: typeof noop;
+        images: any[];
+        activeIndex: number;
+        zIndex: number;
+        drag: boolean;
+        attribute: boolean;
+        zoomable: boolean;
+        rotatable: boolean;
+        scalable: boolean;
+        onMaskClick: typeof noop;
+        changeable: boolean;
+        customToolbar: (toolbars: any) => any;
+        zoomSpeed: number;
+    };
+    private prefixCls;
+    private containerWidth;
+    private containerHeight;
+    private footerHeight;
+    constructor(props: any);
+    setContainerWidthHeight(): void;
+    handleClose: (e: any) => void;
+    startVisible(activeIndex: number): void;
+    componentDidMount(): void;
+    getImgWidthHeight(imgWidth: any, imgHeight: any): number[];
+    loadImgSuccess: (activeImage: ImageDecorator, imgWidth: any, imgHeight: any) => void;
+    loadImg(activeIndex: any, firstLoad?: boolean): void;
+    handleChangeImg: (newIndex: number) => void;
+    handleChangeImgState: (width: any, height: any, top: any, left: any) => void;
+    handleDefaultAction: (type: ActionType) => void;
+    handleAction: (config: ToolbarConfig) => void;
+    handleDownload: () => void;
+    handleScaleX: (newScale: 1 | -1) => void;
+    handleScaleY: (newScale: 1 | -1) => void;
+    handleScrollZoom: (targetX: any, targetY: any, direct: any) => void;
+    handleZoom: (targetX: any, targetY: any, direct: any, scale: any) => void;
+    getImageCenterXY: () => {
+        x: number;
+        y: number;
+    };
+    handleRotate: (isRight?: boolean) => void;
+    handleResize: () => void;
+    handleKeydown: (e: any) => void;
+    handleTransitionEnd: (e: any) => void;
+    bindEvent(remove?: boolean): void;
+    componentWillUnmount(): void;
+    componentWillReceiveProps(nextProps: ViewerProps): void;
+    handleCanvasMouseDown: (e: any) => void;
+    getActiveImage: () => ImageDecorator;
+    handleMouseScroll: (e: any) => void;
+    render(): JSX.Element;
+}
+export {};
