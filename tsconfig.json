@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "moduleResolution": "node",
+    "jsx": "preserve",
+    "sourceMap": true,
+    "removeComments": false,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "types": [
+      "react",
+      "react-dom",
+      "node"
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "__tests__"
+  ]
+}
