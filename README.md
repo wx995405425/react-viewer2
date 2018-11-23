@@ -5,12 +5,12 @@
 
 ## Introduction
 
-Because I can`t be comfortable using [viewerjs](https://github.com/fengyuanchen/viewerjs) in react, so I created react-viewer to replace it.
+This is a component based on [react-viewer](https://github.com/fengyuanchen/viewerjs). I modified some styles here and added a new property imageCaption.
 
 ## Installation
 
 ```bash
-npm install react-viewer --save
+npm install react-viewer2 --save
 ```
 
 ## Usage
@@ -37,6 +37,7 @@ class App extends React.Component<any, any> {
         visible={this.state.visible}
         onClose={() => { this.setState({ visible: false }); } }
         images={[{src: '', alt: ''}]}
+        imageCaption={<div>BBBBBB</div>}
         />
       </div>
     );
@@ -71,6 +72,7 @@ class App extends React.Component<any, any> {
 | zoomSpeed    | number       | 0.05    | zoom speed | false |
 | defaultSize    | [ViewerImageSize](#viewerimagesize) | - | default image size | false |
 | defaultImg    | [viewerdefaultimg](#viewerimagesize) | - | if load img failed, show default img | false |
+| imageCaption    | React.ReactNode | - | display extended information | false |
 
 ### ImageDecorator
 

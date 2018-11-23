@@ -1,7 +1,7 @@
 {
-  "name": "react-viewer",
-  "version": "2.6.1",
-  "description": "react image viewer",
+  "name": "react-viewer2",
+  "version": "1.0.0",
+  "description": "This is a component based on react-viewer",
   "main": "dist/index",
   "scripts": {
     "test": "jest",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/infeng/react-viewer.git"
+    "url": "git+https://github.com/wx995405425/react-viewer2.git"
   },
   "keywords": [
     "react",
@@ -23,14 +23,14 @@
   "author": "infeng",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/infeng/react-viewer/issues"
+    "url": "https://github.com/wx995405425/react-viewer2/issues"
   },
   "files": [
     "dist",
     "lib"
   ],
   "typings": "lib/index.d.ts",
-  "homepage": "https://github.com/infeng/react-viewer#readme",
+  "homepage": "https://github.com/wx995405425/react-viewer2#readme",
   "devDependencies": {
     "@types/jest": "^23.3.1",
     "@types/node": "^6.0.45",
